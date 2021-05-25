@@ -35,9 +35,9 @@
 |[az dataprotection backup-instance update](#BackupInstancesCreateOrUpdate#Update)|CreateOrUpdate#Update|[Parameters](#ParametersBackupInstancesCreateOrUpdate#Update)|Not Found|
 |[az dataprotection backup-instance delete](#BackupInstancesDelete)|Delete|[Parameters](#ParametersBackupInstancesDelete)|[Example](#ExamplesBackupInstancesDelete)|
 |[az dataprotection backup-instance adhoc-backup](#BackupInstancesAdhocBackup)|AdhocBackup|[Parameters](#ParametersBackupInstancesAdhocBackup)|[Example](#ExamplesBackupInstancesAdhocBackup)|
-|[az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo)|TriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo)|
-|[az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo)|TriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo)|
-|[az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo)|TriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo)|
+|[az dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo)|TriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo)|
+|[az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo)|TriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo)|
+|[az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo)|TriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo)|
 |[az dataprotection backup-instance azure-backup-recovery-time-based-restore-request item-level-restore-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#ItemLevelRestoreTargetInfo)|TriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#ItemLevelRestoreTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#ItemLevelRestoreTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#ItemLevelRestoreTargetInfo)|
 |[az dataprotection backup-instance azure-backup-recovery-time-based-restore-request restore-files-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreFilesTargetInfo)|TriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreFilesTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreFilesTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreFilesTargetInfo)|
 |[az dataprotection backup-instance azure-backup-recovery-time-based-restore-request restore-target-info trigger-restore](#BackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreTargetInfo)|TriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreTargetInfo|[Parameters](#ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreTargetInfo)|[Example](#ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryTimeBasedRestoreRequest#RestoreTargetInfo)|
@@ -231,25 +231,24 @@ az dataprotection backup-instance adhoc-backup --name "testInstance1" --rule-nam
 |**--rule-name**|string||rule_name|ruleName|
 |**--retention-tag-override**|string||retention_tag_override|retentionTagOverride|
 
-#### <a name="BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo">Command `az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore`</a>
+#### <a name="BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo">Command `az dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info trigger-restore`</a>
 
-##### <a name="ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo">Example</a>
+##### <a name="ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo">Example</a>
 ```
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request item-level-restore-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationreq\
-uest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" \
---resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request item-level-restore-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationreq\
-uest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" \
---resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request item-level-restore-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationreq\
-uest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-rehydration-priority "High" \
---azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" --azurebackuprestorewithrehydrationreque\
-st-source-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
 ```
-##### <a name="ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#ItemLevelRestoreTargetInfo">Parameters</a> 
+##### <a name="ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#ItemLevelRestoreTargetInfo">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
 |**--vault-name**|string|The name of the backup vault.|vault_name|vaultName|
@@ -257,73 +256,65 @@ st-source-data-store-type "VaultStore" --resource-group "000pikumar" --vault-nam
 |**--backup-instance-name**|string|The name of the backup instance|backup_instance_name|backupInstanceName|
 |**--item-level-restore-target-info-restore-criteria**|array|Restore Criteria|item_level_restore_target_info_restore_criteria|restoreCriteria|
 |**--item-level-restore-target-info-datasource-info**|object|Information of target DS|item_level_restore_target_info_datasource_info|datasourceInfo|
-|**--azurebackuprestorewithrehydrationrequest-source-data-store-type**|choice|Gets or sets the type of the source data store.|azurebackuprestorewithrehydrationrequest_source_data_store_type|sourceDataStoreType|
-|**--azurebackuprestorewithrehydrationrequest-recovery-point-id**|string||azurebackuprestorewithrehydrationrequest_recovery_point_id|recoveryPointId|
-|**--azurebackuprestorewithrehydrationrequest-rehydration-priority**|choice|Priority to be used for rehydration. Values High or Standard|azurebackuprestorewithrehydrationrequest_rehydration_priority|rehydrationPriority|
-|**--azurebackuprestorewithrehydrationrequest-rehydration-retention-duration**|string|Retention duration in ISO 8601 format i.e P10D .|azurebackuprestorewithrehydrationrequest_rehydration_retention_duration|rehydrationRetentionDuration|
+|**--azurebackuprecoverypointbasedrestorerequest-source-data-store-type**|choice|Gets or sets the type of the source data store.|azurebackuprecoverypointbasedrestorerequest_source_data_store_type|sourceDataStoreType|
+|**--azurebackuprecoverypointbasedrestorerequest-recovery-point-id**|string||azurebackuprecoverypointbasedrestorerequest_recovery_point_id|recoveryPointId|
 |**--item-level-restore-target-info-restore-location**|string|Target Restore region|item_level_restore_target_info_restore_location|restoreLocation|
 |**--item-level-restore-target-info-datasource-set-info**|object|Information of target DS Set|item_level_restore_target_info_datasource_set_info|datasourceSetInfo|
 
-#### <a name="BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo">Command `az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore`</a>
+#### <a name="BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo">Command `az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info trigger-restore`</a>
 
-##### <a name="ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo">Example</a>
+##### <a name="ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo">Example</a>
 ```
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request restore-files-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationrequest-\
-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" \
---resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request restore-files-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationrequest-\
-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" \
---resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request restore-files-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationrequest-\
-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-rehydration-priority "High" \
---azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" --azurebackuprestorewithrehydrationreque\
-st-source-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
 ```
-##### <a name="ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreFilesTargetInfo">Parameters</a> 
+##### <a name="ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreFilesTargetInfo">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
 |**--vault-name**|string|The name of the backup vault.|vault_name|vaultName|
 |**--resource-group-name**|string|The name of the resource group where the backup vault is present.|resource_group_name|resourceGroupName|
 |**--backup-instance-name**|string|The name of the backup instance|backup_instance_name|backupInstanceName|
 |**--restore-files-target-info-target-details**|object|Destination of RestoreAsFiles operation, when destination is not a datasource|restore_files_target_info_target_details|targetDetails|
-|**--azurebackuprestorewithrehydrationrequest-source-data-store-type**|choice|Gets or sets the type of the source data store.|azurebackuprestorewithrehydrationrequest_source_data_store_type|sourceDataStoreType|
-|**--azurebackuprestorewithrehydrationrequest-recovery-point-id**|string||azurebackuprestorewithrehydrationrequest_recovery_point_id|recoveryPointId|
-|**--azurebackuprestorewithrehydrationrequest-rehydration-priority**|choice|Priority to be used for rehydration. Values High or Standard|azurebackuprestorewithrehydrationrequest_rehydration_priority|rehydrationPriority|
-|**--azurebackuprestorewithrehydrationrequest-rehydration-retention-duration**|string|Retention duration in ISO 8601 format i.e P10D .|azurebackuprestorewithrehydrationrequest_rehydration_retention_duration|rehydrationRetentionDuration|
+|**--azurebackuprecoverypointbasedrestorerequest-source-data-store-type**|choice|Gets or sets the type of the source data store.|azurebackuprecoverypointbasedrestorerequest_source_data_store_type|sourceDataStoreType|
+|**--azurebackuprecoverypointbasedrestorerequest-recovery-point-id**|string||azurebackuprecoverypointbasedrestorerequest_recovery_point_id|recoveryPointId|
 |**--restore-files-target-info-restore-location**|string|Target Restore region|restore_files_target_info_restore_location|restoreLocation|
 
-#### <a name="BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo">Command `az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-target-info trigger-restore`</a>
+#### <a name="BackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo">Command `az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info trigger-restore`</a>
 
-##### <a name="ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo">Example</a>
+##### <a name="ExamplesBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo">Example</a>
 ```
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request restore-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationrequest-recove\
-ry-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" \
---resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request restore-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationrequest-recove\
-ry-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" \
---resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
-az dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydrati\
-on-request restore-target-info trigger-restore --name "testInstance1" --azurebackuprestorewithrehydrationrequest-recove\
-ry-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-rehydration-priority "High" \
---azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" --azurebackuprestorewithrehydrationreque\
-st-source-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PrivatePreviewVault1"
+az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
 ```
-##### <a name="ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#AzureBackupRestoreWithRehydrationRequest#RestoreTargetInfo">Parameters</a> 
+##### <a name="ParametersBackupInstancesTriggerRestore#AzureBackupRecoveryPointBasedRestoreRequest#RestoreTargetInfo">Parameters</a> 
 |Option|Type|Description|Path (SDK)|Swagger name|
 |------|----|-----------|----------|------------|
 |**--vault-name**|string|The name of the backup vault.|vault_name|vaultName|
 |**--resource-group-name**|string|The name of the resource group where the backup vault is present.|resource_group_name|resourceGroupName|
 |**--backup-instance-name**|string|The name of the backup instance|backup_instance_name|backupInstanceName|
 |**--restore-target-info-datasource-info**|object|Information of target DS|restore_target_info_datasource_info|datasourceInfo|
-|**--azurebackuprestorewithrehydrationrequest-source-data-store-type**|choice|Gets or sets the type of the source data store.|azurebackuprestorewithrehydrationrequest_source_data_store_type|sourceDataStoreType|
-|**--azurebackuprestorewithrehydrationrequest-recovery-point-id**|string||azurebackuprestorewithrehydrationrequest_recovery_point_id|recoveryPointId|
-|**--azurebackuprestorewithrehydrationrequest-rehydration-priority**|choice|Priority to be used for rehydration. Values High or Standard|azurebackuprestorewithrehydrationrequest_rehydration_priority|rehydrationPriority|
-|**--azurebackuprestorewithrehydrationrequest-rehydration-retention-duration**|string|Retention duration in ISO 8601 format i.e P10D .|azurebackuprestorewithrehydrationrequest_rehydration_retention_duration|rehydrationRetentionDuration|
+|**--azurebackuprecoverypointbasedrestorerequest-source-data-store-type**|choice|Gets or sets the type of the source data store.|azurebackuprecoverypointbasedrestorerequest_source_data_store_type|sourceDataStoreType|
+|**--azurebackuprecoverypointbasedrestorerequest-recovery-point-id**|string||azurebackuprecoverypointbasedrestorerequest_recovery_point_id|recoveryPointId|
 |**--restore-target-info-restore-location**|string|Target Restore region|restore_target_info_restore_location|restoreLocation|
 |**--restore-target-info-datasource-set-info**|object|Information of target DS Set|restore_target_info_datasource_set_info|datasourceSetInfo|
 

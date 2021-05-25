@@ -97,21 +97,18 @@ def load_command_table(self, _):
         g.custom_command('delete', 'dataprotection_backup_instance_delete', supports_no_wait=True, confirmation=True)
         g.custom_command('adhoc-backup', 'dataprotection_backup_instance_adhoc_backup', supports_no_wait=True)
         g.custom_command(
-            'azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request'
-            ' item-level-restore-target-info trigger-restore',
-            'dataprotection_backup_instance_azure_backup_recovery_point_based_restore_request_azure_backup_restore_with_rehydration_request_item_level_restore_target_info_trigger_restore',
+            'azure-backup-recovery-point-based-restore-request item-level-restore-target-info trigger-restore',
+            'dataprotection_backup_instance_azure_backup_recovery_point_based_restore_request_item_level_restore_target_info_trigger_restore',
             supports_no_wait=True,
         )
         g.custom_command(
-            'azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request'
-            ' restore-files-target-info trigger-restore',
-            'dataprotection_backup_instance_azure_backup_recovery_point_based_restore_request_azure_backup_restore_with_rehydration_request_restore_files_target_info_trigger_restore',
+            'azure-backup-recovery-point-based-restore-request restore-files-target-info trigger-restore',
+            'dataprotection_backup_instance_azure_backup_recovery_point_based_restore_request_restore_files_target_info_trigger_restore',
             supports_no_wait=True,
         )
         g.custom_command(
-            'azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request'
-            ' restore-target-info trigger-restore',
-            'dataprotection_backup_instance_azure_backup_recovery_point_based_restore_request_azure_backup_restore_with_rehydration_request_restore_target_info_trigger_restore',
+            'azure-backup-recovery-point-based-restore-request restore-target-info trigger-restore',
+            'dataprotection_backup_instance_azure_backup_recovery_point_based_restore_request_restore_target_info_trigger_restore',
             supports_no_wait=True,
         )
         g.custom_command(

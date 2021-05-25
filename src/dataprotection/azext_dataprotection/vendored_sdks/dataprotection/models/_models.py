@@ -2672,9 +2672,9 @@ class RestoreTargetInfoBase(msrest.serialization.Model):
 
     All required parameters must be populated in order to send to Azure.
 
-    :param target_info_type: Required. Type of Datasource object, used to initialize the right
-     inherited type.Constant filled by server.
-    :type target_info_type: str
+    :param object_type: Required. Type of Datasource object, used to initialize the right inherited
+     type.Constant filled by server.
+    :type object_type: str
     :param recovery_option: Required. Recovery Option. Possible values include: "FailIfExists".
     :type recovery_option: str or ~data_protection_client.models.RecoveryOption
     :param restore_location: Target Restore region.
@@ -2682,18 +2682,18 @@ class RestoreTargetInfoBase(msrest.serialization.Model):
     """
 
     _validation = {
-        'target_info_type': {'required': True},
+        'object_type': {'required': True},
         'recovery_option': {'required': True},
     }
 
     _attribute_map = {
-        'target_info_type': {'key': 'objectType', 'type': 'str'},
+        'object_type': {'key': 'objectType', 'type': 'str'},
         'recovery_option': {'key': 'recoveryOption', 'type': 'str'},
         'restore_location': {'key': 'restoreLocation', 'type': 'str'},
     }
 
     _subtype_map = {
-        'target_info_type': {'ItemLevelRestoreTargetInfo': 'ItemLevelRestoreTargetInfo', 'RestoreFilesTargetInfo': 'RestoreFilesTargetInfo', 'RestoreTargetInfo': 'RestoreTargetInfo'}
+        'object_type': {'ItemLevelRestoreTargetInfo': 'ItemLevelRestoreTargetInfo', 'RestoreFilesTargetInfo': 'RestoreFilesTargetInfo', 'RestoreTargetInfo': 'RestoreTargetInfo'}
     }
 
     def __init__(
@@ -2701,7 +2701,7 @@ class RestoreTargetInfoBase(msrest.serialization.Model):
         **kwargs
     ):
         super(RestoreTargetInfoBase, self).__init__(**kwargs)
-        self.target_info_type = None  # type: Optional[str]
+        self.object_type = None  # type: Optional[str]
         self.recovery_option = kwargs['recovery_option']
         self.restore_location = kwargs.get('restore_location', None)
 
@@ -2711,9 +2711,9 @@ class ItemLevelRestoreTargetInfo(RestoreTargetInfoBase):
 
     All required parameters must be populated in order to send to Azure.
 
-    :param target_info_type: Required. Type of Datasource object, used to initialize the right
-     inherited type.Constant filled by server.
-    :type target_info_type: str
+    :param object_type: Required. Type of Datasource object, used to initialize the right inherited
+     type.Constant filled by server.
+    :type object_type: str
     :param recovery_option: Required. Recovery Option. Possible values include: "FailIfExists".
     :type recovery_option: str or ~data_protection_client.models.RecoveryOption
     :param restore_location: Target Restore region.
@@ -2727,14 +2727,14 @@ class ItemLevelRestoreTargetInfo(RestoreTargetInfoBase):
     """
 
     _validation = {
-        'target_info_type': {'required': True},
+        'object_type': {'required': True},
         'recovery_option': {'required': True},
         'restore_criteria': {'required': True},
         'datasource_info': {'required': True},
     }
 
     _attribute_map = {
-        'target_info_type': {'key': 'objectType', 'type': 'str'},
+        'object_type': {'key': 'objectType', 'type': 'str'},
         'recovery_option': {'key': 'recoveryOption', 'type': 'str'},
         'restore_location': {'key': 'restoreLocation', 'type': 'str'},
         'restore_criteria': {'key': 'restoreCriteria', 'type': '[ItemLevelRestoreCriteria]'},
@@ -2747,7 +2747,7 @@ class ItemLevelRestoreTargetInfo(RestoreTargetInfoBase):
         **kwargs
     ):
         super(ItemLevelRestoreTargetInfo, self).__init__(**kwargs)
-        self.target_info_type = 'ItemLevelRestoreTargetInfo'  # type: str
+        self.object_type = 'ItemLevelRestoreTargetInfo'  # type: str
         self.restore_criteria = kwargs['restore_criteria']
         self.datasource_info = kwargs['datasource_info']
         self.datasource_set_info = kwargs.get('datasource_set_info', None)
@@ -3218,9 +3218,9 @@ class RestoreFilesTargetInfo(RestoreTargetInfoBase):
 
     All required parameters must be populated in order to send to Azure.
 
-    :param target_info_type: Required. Type of Datasource object, used to initialize the right
-     inherited type.Constant filled by server.
-    :type target_info_type: str
+    :param object_type: Required. Type of Datasource object, used to initialize the right inherited
+     type.Constant filled by server.
+    :type object_type: str
     :param recovery_option: Required. Recovery Option. Possible values include: "FailIfExists".
     :type recovery_option: str or ~data_protection_client.models.RecoveryOption
     :param restore_location: Target Restore region.
@@ -3231,13 +3231,13 @@ class RestoreFilesTargetInfo(RestoreTargetInfoBase):
     """
 
     _validation = {
-        'target_info_type': {'required': True},
+        'object_type': {'required': True},
         'recovery_option': {'required': True},
         'target_details': {'required': True},
     }
 
     _attribute_map = {
-        'target_info_type': {'key': 'objectType', 'type': 'str'},
+        'object_type': {'key': 'objectType', 'type': 'str'},
         'recovery_option': {'key': 'recoveryOption', 'type': 'str'},
         'restore_location': {'key': 'restoreLocation', 'type': 'str'},
         'target_details': {'key': 'targetDetails', 'type': 'TargetDetails'},
@@ -3248,7 +3248,7 @@ class RestoreFilesTargetInfo(RestoreTargetInfoBase):
         **kwargs
     ):
         super(RestoreFilesTargetInfo, self).__init__(**kwargs)
-        self.target_info_type = 'RestoreFilesTargetInfo'  # type: str
+        self.object_type = 'RestoreFilesTargetInfo'  # type: str
         self.target_details = kwargs['target_details']
 
 
@@ -3280,9 +3280,9 @@ class RestoreTargetInfo(RestoreTargetInfoBase):
 
     All required parameters must be populated in order to send to Azure.
 
-    :param target_info_type: Required. Type of Datasource object, used to initialize the right
-     inherited type.Constant filled by server.
-    :type target_info_type: str
+    :param object_type: Required. Type of Datasource object, used to initialize the right inherited
+     type.Constant filled by server.
+    :type object_type: str
     :param recovery_option: Required. Recovery Option. Possible values include: "FailIfExists".
     :type recovery_option: str or ~data_protection_client.models.RecoveryOption
     :param restore_location: Target Restore region.
@@ -3294,13 +3294,13 @@ class RestoreTargetInfo(RestoreTargetInfoBase):
     """
 
     _validation = {
-        'target_info_type': {'required': True},
+        'object_type': {'required': True},
         'recovery_option': {'required': True},
         'datasource_info': {'required': True},
     }
 
     _attribute_map = {
-        'target_info_type': {'key': 'objectType', 'type': 'str'},
+        'object_type': {'key': 'objectType', 'type': 'str'},
         'recovery_option': {'key': 'recoveryOption', 'type': 'str'},
         'restore_location': {'key': 'restoreLocation', 'type': 'str'},
         'datasource_info': {'key': 'datasourceInfo', 'type': 'Datasource'},
@@ -3312,7 +3312,7 @@ class RestoreTargetInfo(RestoreTargetInfoBase):
         **kwargs
     ):
         super(RestoreTargetInfo, self).__init__(**kwargs)
-        self.target_info_type = 'RestoreTargetInfo'  # type: str
+        self.object_type = 'RestoreTargetInfo'  # type: str
         self.datasource_info = kwargs['datasource_info']
         self.datasource_set_info = kwargs.get('datasource_set_info', None)
 

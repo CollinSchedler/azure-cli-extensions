@@ -175,7 +175,7 @@ def load_arguments(self, _):
         c.argument('rule_name', type=str, help='', arg_group='Backup Rule Options')
         c.argument('retention_tag_override', type=str, help='', arg_group='Backup Rule Options Trigger Option')
 
-    with self.argument_context('dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore') as c:
+    with self.argument_context('dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info trigger-restore') as c:
         c.argument('vault_name', type=str, help='The name of the backup vault.', id_part='name')
         c.argument('resource_group_name', resource_group_name_type)
         c.argument('backup_instance_name', options_list=['--name', '-n', '--backup-instance-name'], type=str,
@@ -187,22 +187,15 @@ def load_arguments(self, _):
                    help='Information of target DS')
         c.argument('item_level_restore_target_info_datasource_set_info', action=AddDataSourceSetInfo, nargs='+',
                    help='Information of target DS Set')
-        c.argument('azurebackuprestorewithrehydrationrequest_source_data_store_type', arg_type=get_enum_type([
-                                                                                                              'ArchiveStore',
-                                                                                                              'SnapshotStore',
-                                                                                                              'VaultStore'
-                                                                                                              ]),
+        c.argument('azurebackuprecoverypointbasedrestorerequest_source_data_store_type', arg_type=get_enum_type([
+                                                                                                                 'ArchiveStore',
+                                                                                                                 'SnapshotStore',
+                                                                                                                 'VaultStore'
+                                                                                                                 ]),
                    help='Gets or sets the type of the source data store.')
-        c.argument('azurebackuprestorewithrehydrationrequest_recovery_point_id', type=str, help='')
-        c.argument('azurebackuprestorewithrehydrationrequest_rehydration_priority', arg_type=get_enum_type(['Invalid',
-                                                                                                            'High',
-                                                                                                            'Standard']
-                                                                                                            ),
-                   help='Priority to be used for rehydration. Values High or Standard')
-        c.argument('azurebackuprestorewithrehydrationrequest_rehydration_retention_duration', type=str,
-                   help='Retention duration in ISO 8601 format i.e P10D .')
+        c.argument('azurebackuprecoverypointbasedrestorerequest_recovery_point_id', type=str, help='')
 
-    with self.argument_context('dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore') as c:
+    with self.argument_context('dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info trigger-restore') as c:
         c.argument('vault_name', type=str, help='The name of the backup vault.', id_part='name')
         c.argument('resource_group_name', resource_group_name_type)
         c.argument('backup_instance_name', options_list=['--name', '-n', '--backup-instance-name'], type=str,
@@ -210,22 +203,15 @@ def load_arguments(self, _):
         c.argument('restore_files_target_info_restore_location', type=str, help='Target Restore region')
         c.argument('restore_files_target_info_target_details', action=AddRestoreFilesTargetInfoTargetDetails,
                    nargs='+', help='Destination of RestoreAsFiles operation, when destination is not a datasource')
-        c.argument('azurebackuprestorewithrehydrationrequest_source_data_store_type', arg_type=get_enum_type([
-                                                                                                              'ArchiveStore',
-                                                                                                              'SnapshotStore',
-                                                                                                              'VaultStore'
-                                                                                                              ]),
+        c.argument('azurebackuprecoverypointbasedrestorerequest_source_data_store_type', arg_type=get_enum_type([
+                                                                                                                 'ArchiveStore',
+                                                                                                                 'SnapshotStore',
+                                                                                                                 'VaultStore'
+                                                                                                                 ]),
                    help='Gets or sets the type of the source data store.')
-        c.argument('azurebackuprestorewithrehydrationrequest_recovery_point_id', type=str, help='')
-        c.argument('azurebackuprestorewithrehydrationrequest_rehydration_priority', arg_type=get_enum_type(['Invalid',
-                                                                                                            'High',
-                                                                                                            'Standard']
-                                                                                                            ),
-                   help='Priority to be used for rehydration. Values High or Standard')
-        c.argument('azurebackuprestorewithrehydrationrequest_rehydration_retention_duration', type=str,
-                   help='Retention duration in ISO 8601 format i.e P10D .')
+        c.argument('azurebackuprecoverypointbasedrestorerequest_recovery_point_id', type=str, help='')
 
-    with self.argument_context('dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-target-info trigger-restore') as c:
+    with self.argument_context('dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info trigger-restore') as c:
         c.argument('vault_name', type=str, help='The name of the backup vault.', id_part='name')
         c.argument('resource_group_name', resource_group_name_type)
         c.argument('backup_instance_name', options_list=['--name', '-n', '--backup-instance-name'], type=str,
@@ -235,20 +221,13 @@ def load_arguments(self, _):
                    'target DS')
         c.argument('restore_target_info_datasource_set_info', action=AddDataSourceSetInfo, nargs='+',
                    help='Information of target DS Set')
-        c.argument('azurebackuprestorewithrehydrationrequest_source_data_store_type', arg_type=get_enum_type([
-                                                                                                              'ArchiveStore',
-                                                                                                              'SnapshotStore',
-                                                                                                              'VaultStore'
-                                                                                                              ]),
+        c.argument('azurebackuprecoverypointbasedrestorerequest_source_data_store_type', arg_type=get_enum_type([
+                                                                                                                 'ArchiveStore',
+                                                                                                                 'SnapshotStore',
+                                                                                                                 'VaultStore'
+                                                                                                                 ]),
                    help='Gets or sets the type of the source data store.')
-        c.argument('azurebackuprestorewithrehydrationrequest_recovery_point_id', type=str, help='')
-        c.argument('azurebackuprestorewithrehydrationrequest_rehydration_priority', arg_type=get_enum_type(['Invalid',
-                                                                                                            'High',
-                                                                                                            'Standard']
-                                                                                                            ),
-                   help='Priority to be used for rehydration. Values High or Standard')
-        c.argument('azurebackuprestorewithrehydrationrequest_rehydration_retention_duration', type=str,
-                   help='Retention duration in ISO 8601 format i.e P10D .')
+        c.argument('azurebackuprecoverypointbasedrestorerequest_recovery_point_id', type=str, help='')
 
     with self.argument_context('dataprotection backup-instance azure-backup-recovery-time-based-restore-request item-level-restore-target-info trigger-restore') as c:
         c.argument('vault_name', type=str, help='The name of the backup vault.', id_part='name')

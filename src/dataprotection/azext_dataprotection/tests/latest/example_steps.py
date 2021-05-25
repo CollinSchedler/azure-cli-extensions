@@ -80,53 +80,6 @@ def step_backup_instance_create(test, checks=None):
              checks=checks)
 
 
-# EXAMPLE: /BackupInstances/post/Trigger Restore
-@try_manual
-def step_backup_instance_azure(test, checks=None):
-    if checks is None:
-        checks = []
-    test.cmd('az dataprotection backup-instance azure-backup-recovery-point-based-restore-request '
-             'azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore '
-             '--name "{myBackupInstance}" '
-             '--azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" '
-             '--azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" '
-             '--resource-group "{rg_2}" '
-             '--vault-name "{myBackupVault}"',
-             checks=checks)
-
-
-# EXAMPLE: /BackupInstances/post/Trigger Restore As Files
-@try_manual
-def step_backup_instance_azure2(test, checks=None):
-    if checks is None:
-        checks = []
-    test.cmd('az dataprotection backup-instance azure-backup-recovery-point-based-restore-request '
-             'azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore '
-             '--name "{myBackupInstance}" '
-             '--azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" '
-             '--azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" '
-             '--resource-group "{rg_2}" '
-             '--vault-name "PrivatePreviewVault1"',
-             checks=checks)
-
-
-# EXAMPLE: /BackupInstances/post/Trigger Restore With Rehydration
-@try_manual
-def step_backup_instance_azure3(test, checks=None):
-    if checks is None:
-        checks = []
-    test.cmd('az dataprotection backup-instance azure-backup-recovery-point-based-restore-request '
-             'azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore '
-             '--name "{myBackupInstance}" '
-             '--azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" '
-             '--azurebackuprestorewithrehydrationrequest-rehydration-priority "High" '
-             '--azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" '
-             '--azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" '
-             '--resource-group "{rg_2}" '
-             '--vault-name "{myBackupVault}"',
-             checks=checks)
-
-
 # EXAMPLE: /BackupPolicies/delete/Delete BackupPolicy
 @try_manual
 def step_backup_policy_delete(test, checks=None):
@@ -267,6 +220,42 @@ def step_backup_instance_trigger_rehydrate(test, checks=None):
              '--resource-group "{rg_2}" '
              '--vault-name "{myBackupVault}"',
              checks=checks)
+
+
+# EXAMPLE: /BackupInstances/post/Trigger Restore
+@try_manual
+def step_backup_instance_azure(test, checks=None):
+    if checks is None:
+        checks = []
+    test.cmd('az dataprotection backup-instance azure-backup-recovery-point-based-restore-request '
+             'item-level-restore-target-info trigger-restore '
+             '--name "{myBackupInstance}" '
+             '--azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" '
+             '--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" '
+             '--resource-group "{rg_2}" '
+             '--vault-name "{myBackupVault}"',
+             checks=checks)
+
+
+# EXAMPLE: /BackupInstances/post/Trigger Restore As Files
+@try_manual
+def step_backup_instance_azure2(test, checks=None):
+    if checks is None:
+        checks = []
+    test.cmd('az dataprotection backup-instance azure-backup-recovery-point-based-restore-request '
+             'item-level-restore-target-info trigger-restore '
+             '--name "{myBackupInstance}" '
+             '--azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" '
+             '--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" '
+             '--resource-group "{rg_2}" '
+             '--vault-name "PrivatePreviewVault1"',
+             checks=checks)
+
+
+# EXAMPLE: /BackupInstances/post/Trigger Restore With Rehydration
+@try_manual
+def step_backup_instance_azure3(test, checks=None):
+    return step_backup_instance_azure(test, checks)
 
 
 # EXAMPLE: /BackupInstances/delete/Delete BackupInstance

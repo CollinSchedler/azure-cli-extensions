@@ -367,7 +367,7 @@ helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-
 st
 """
 
-helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore'] = """
+helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-request item-level-restore-target-info trigger-restore'] = """
     type: command
     short-summary: "Triggers restore for a BackupInstance."
     parameters:
@@ -412,26 +412,24 @@ resources, this will be the ID created by backup service via Fabric/Vault.
       - name: Trigger Restore
         text: |-
                az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-s\
-ource-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
+item-level-restore-target-info trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-rec\
+overy-point-id "hardcodedRP" --azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" \
+--resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
       - name: Trigger Restore As Files
         text: |-
                az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-s\
-ource-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
+item-level-restore-target-info trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-rec\
+overy-point-id "hardcodedRP" --azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" \
+--resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
       - name: Trigger Restore With Rehydration
         text: |-
                az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request item-level-restore-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-r\
-ehydration-priority "High" --azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" \
---azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
---vault-name "PratikPrivatePreviewVault1"
+item-level-restore-target-info trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-rec\
+overy-point-id "hardcodedRP" --azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" \
+--resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
 """
 
-helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore'] = """
+helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-files-target-info trigger-restore'] = """
     type: command
     short-summary: "Triggers restore for a BackupInstance."
     parameters:
@@ -449,26 +447,24 @@ string value for the enum {Microsoft.Internal.AzureBackup.DataProtection.Common.
       - name: Trigger Restore
         text: |-
                az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-s\
-ource-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
+restore-files-target-info trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery\
+-point-id "hardcodedRP" --azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" \
+--resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
       - name: Trigger Restore As Files
         text: |-
                az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-s\
-ource-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
+restore-files-target-info trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery\
+-point-id "hardcodedRP" --azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" \
+--resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
       - name: Trigger Restore With Rehydration
         text: |-
                az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request restore-files-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-r\
-ehydration-priority "High" --azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" \
---azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
---vault-name "PratikPrivatePreviewVault1"
+restore-files-target-info trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery\
+-point-id "hardcodedRP" --azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" \
+--resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
 """
 
-helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-request azure-backup-restore-with-rehydration-request restore-target-info trigger-restore'] = """
+helps['dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info trigger-restore'] = """
     type: command
     short-summary: "Triggers restore for a BackupInstance."
     parameters:
@@ -503,23 +499,21 @@ resources, this will be the ID created by backup service via Fabric/Vault.
     examples:
       - name: Trigger Restore
         text: |-
-               az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request restore-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-s\
-ource-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PratikPrivatePreviewVault1"
+               az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PratikPrivatePreviewVault1"
       - name: Trigger Restore As Files
         text: |-
-               az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request restore-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-s\
-ource-data-store-type "VaultStore" --resource-group "000pikumar" --vault-name "PrivatePreviewVault1"
+               az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+--vault-name "PrivatePreviewVault1"
       - name: Trigger Restore With Rehydration
         text: |-
-               az dataprotection backup-instance azure-backup-recovery-point-based-restore-request \
-azure-backup-restore-with-rehydration-request restore-target-info trigger-restore --name "testInstance1" \
---azurebackuprestorewithrehydrationrequest-recovery-point-id "hardcodedRP" --azurebackuprestorewithrehydrationrequest-r\
-ehydration-priority "High" --azurebackuprestorewithrehydrationrequest-rehydration-retention-duration "7D" \
---azurebackuprestorewithrehydrationrequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
+               az dataprotection backup-instance azure-backup-recovery-point-based-restore-request restore-target-info \
+trigger-restore --name "testInstance1" --azurebackuprecoverypointbasedrestorerequest-recovery-point-id "hardcodedRP" \
+--azurebackuprecoverypointbasedrestorerequest-source-data-store-type "VaultStore" --resource-group "000pikumar" \
 --vault-name "PratikPrivatePreviewVault1"
 """
 
